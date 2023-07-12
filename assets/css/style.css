@@ -7,6 +7,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -88,6 +89,8 @@ nav {
     flex-direction: column;
     position: relative;
     background-color: #ffffff;
+    min-height: 65vh;
+    min-height: 65dvh;
 }
 
 .hero-section-container{
@@ -131,6 +134,9 @@ nav {
 
 /* ============ White section ============ */
 
+.white-section{
+    margin-top: -.5rem;
+}
 .white-section,.black-section{
     width: 100%;
     display: flex;
@@ -172,7 +178,7 @@ nav {
 
 @media (max-width: 991.98px){
     .hero-image img{
-        width: 70%;
+        width: 80%;
         margin-bottom: 2rem;
     }
     .menu{
@@ -187,6 +193,12 @@ nav {
         background: #3434e9;
         border: none;
         box-shadow: #3434e973 12px 12px 25px;
+    }
+    .btn-nav .btn-menu:hover{
+        color: #3434e9;
+        background: #ffffff;
+        border: 1px #3434e9 solid;
+        box-shadow: #6464ff73 12px 12px 25px;
     }
     
 }
