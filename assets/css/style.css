@@ -181,4 +181,8 @@ nav{
     .none{
         display: none;
     }
+    .hero-section svg{
+        width: 100%;
+        margin-bottom: -1.9rem;
+    }
 }
