@@ -161,7 +161,7 @@ nav {
     font-size: clamp(4vw ,4rem,10vw );
 }
 .white-right img, .black-right img{
-    width: 60%;
+    width: 80%;
 }
 
 .reverse{
