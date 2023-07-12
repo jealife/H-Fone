@@ -182,4 +182,11 @@ nav {
         flex-direction: column;
         margin-bottom: 2rem;
     }
+    .btn-nav .btn-menu{
+        color: #ffffff;
+        background: #3434e9;
+        border: none;
+        box-shadow: #3434e973 12px 12px 25px;
+    }
+    
 }
