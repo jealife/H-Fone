@@ -13,12 +13,14 @@ a {
     text-decoration: none;
 }
 
-main {
+main{
+    background-color: #3434e9;
     width: 100%;
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    background-color: #3434e9;
 }
+
 
 /* ============ header ============ */
 
@@ -27,7 +29,6 @@ header {
     display: flex;
     justify-content: center;
     border-bottom: solid 1px #4141416c;
-    background-color: #ffffff;
 }
 
 nav {
@@ -62,8 +63,14 @@ nav {
 
 .menu .link-menu,
 .btn-menu {
-
+    transition: .5s;
     color: #414141;
+}
+.btn-nav .btn-menu:hover{
+    color: #ffffff;
+    background: #3434e9;
+    border: none;
+    box-shadow: #3434e973 12px 12px 25px;
 }
 
 .btn-nav .btn-menu {
@@ -74,158 +81,105 @@ nav {
 
 /* ============ Hero section ============ */
 
-.hero-section {
-    background-color: #ffffff;
-    position: relative;
+.hero-section{
     width: 100%;
     display: flex;
     justify-content: center;
-    min-height: 60vh;
-    min-height: 60dvh;
     flex-direction: column;
+    position: relative;
+    background-color: #ffffff;
 }
 
-.hero-section svg {
-    position: absolute;
+.hero-section-container{
     width: 100%;
+    max-width: 1224px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.80rem 1.25rem 1rem 1.25rem;
+    gap: 2rem;
+}
+.hero-title{
+    text-align: center;
+}
+.hero-title h1{
+    line-height: .9;
+    color: #101824;
+    font-size: clamp(5.6vw ,4rem,10vw );
+    margin-bottom: .5rem;
+}
+.hero-title h1 span{
+    color: #3434e9;
+}
+.hero-image{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+.hero-image img{
+    width: 48%;
+    margin-bottom: 3rem;
+}
+
+.hero-section svg{
+    position: absolute;
     bottom: 0;
 }
 
-.hero-container {
-    max-width: 1224px;
+
+/* ============ White section ============ */
+
+.white-section,.black-section{
     width: 100%;
-    height: 100%;
-    padding: 3rem 1.25rem 10vh 1.25rem;
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 25px;
-
-}
-
-.hero-title {
-    text-align: center;
-    text-transform: capitalize;
-    color: #172027;
-}
-
-.hero-title span {
-    color: #3434e9;
-}
-
-.hero-title h1 {
-    font-size: clamp(5.6vw, 4rem, 10vw);
-    line-height: .9;
-    letter-spacing: .05em;
-    letter-spacing: .05em;
-    margin-bottom: 0.5rem;
-    margin-bottom: 0.5rem;
-
-}
-
-.hero-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.hero-image img {
-    width: 48%;
-    margin-bottom: 3.2rem;
-
-}
-
-
-/*  */
-.white-section,
-.black-section {
-    min-height: 80vh;
-    min-height: 80dvh;
-    width: 100%;
     background-color: #3434e9;
-    color: #ffffff;
 }
-
-.white-section-container,
-.black-section-container {
-    max-width: 1224px;
-    width: 100%;
-    height: 100%;
-    padding: 25px;
+.white-section-container, .black-section-container{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 60px;
-    margin-top: 2rem;
+    padding: 0 25px 25px 25px;
+    gap: 50px;
+    min-height: 100vh;
+    min-height: 100dvh;
 }
 
-.white-left,
-.white-right,
-.black-left,
-.black-right {
+.white-left, .white-right, .black-left, .black-right{
     flex: 1;
     width: 100%;
-}
-
-.white-left h2,
-.black-left h2 {
-    font-size: clamp(3vw, 4rem, 10vw);
-}
-
-.white-right,
-.black-right {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: #ffffff;
+}
+.white-left h2, .black-left h2{
+    
+    font-size: clamp(4vw ,4rem,10vw );
+}
+.white-right img, .black-right img{
+    width: 60%;
 }
 
-.white-right img,
-.black-right img {
-    width: 80%;
+.reverse{
+    flex-direction:row-reverse ;
 }
 
-.reverse {
-    flex-direction: row-reverse;
-}
+/* ============= Responsive  ==================*/
 
-/* responsive */
-
-@media (max-width: 991.98px) {
-    .hero-title h1 {
-
-        font-size: clamp(3vw, 4rem, 10vw);
+@media (max-width: 991.98px){
+    .hero-image img{
+        width: 70%;
+        margin-bottom: 2rem;
     }
-
-    .white-left h2,
-    .black-left h2 {
-        font-size: clamp(5.6vw, 4rem, 10vw);
-    }
-
-    .hero-image img {
-        width: 65%;
-        margin-bottom: 0;
-
-    }
-
-    .white-section-container {
-        flex-direction: column;
-    }
-
-    .reverse {
-        flex-direction: column;
-    }
-
-    .black-section-container {
-        flex-direction: column;
-    }
-
-    .none {
+    .menu{
         display: none;
     }
-
-    .hero-section svg {
-        width: 100%;
+    .white-section-container, .black-section-container{
+        flex-direction: column;
+        margin-bottom: 2rem;
     }
 }
